@@ -20,7 +20,7 @@ permissions: {}
 
 jobs:
   build:
-    if: ${{ always() }}
+    if: ${{ always() && github.actor == 'henaowilmer' }}
     runs-on: ubuntu-latest
     container:
       image: docker.io/zmkfirmware/zmk-build-arm:3.5
